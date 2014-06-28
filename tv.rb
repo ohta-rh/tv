@@ -8,19 +8,19 @@ class Tv
     # 報道番組
     def news
       print "★★★ニュース番組だよ\n"
-      new(:mc).onair
+      new(:mc)
     end
 
     # バラエティ
     def variety
       print "★★★バラエティだよ！\n"
-      new(:mc, :sing, :acting, :conte).onair
+      new(:mc, :sing, :acting, :conte)
     end
 
     # AV
     def av
       print "★★★R18\n"
-      new(:sex).onair
+      new(:sex)
     end
   end
 
@@ -43,6 +43,6 @@ class Tv
   end
 end
 
-Tv.news
-Tv.variety
-Tv.av
+Tv.news.onair
+Tv.variety.onair
+Tv.av.onair
