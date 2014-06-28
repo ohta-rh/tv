@@ -7,16 +7,19 @@ class Tv
 
     # 報道番組
     def news
+      print "ニュース番組だよ\n"
       new(:mc).onair
     end
 
     # バラエティ
     def variety
-      new(:mc, :sing, :acting).onair
+      print "バラエティだよ！\n"
+      new(:mc, :sing, :acting, :conte).onair
     end
 
     # AV
     def av
+      print "R18\n"
       new(:sex).onair
     end
   end
@@ -28,6 +31,7 @@ class Tv
   # = オンエアを実行する
   def onair
     @behaviors.each do |behavior|
+      sleep 1
       talent.public_send behavior
     end
 
@@ -41,8 +45,10 @@ class Tv
   end
 
   def ensure_onair
-    print "番組オワタ\n"
+    print "ご清聴ありがとうございました\n"
   end
 end
 
 Tv.news
+Tv.variety
+Tv.av

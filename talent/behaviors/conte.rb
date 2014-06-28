@@ -1,9 +1,9 @@
 module Talent
   module Behaviors
-    class Conte
+    module Conte
       # = Command Method
       def conte
-        print "そんなバナナ！！"
+        print "そんなバナナ！！\n"
       end
     end
   end

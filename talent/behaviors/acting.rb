@@ -1,9 +1,14 @@
 module Talent
   module Behaviors
-    class Acting
+    module Acting
       # = Command Method
       def acting
-        print "あなたが悪いのよ!"
+        print "ドラマやります\n"
+
+        print "私は悪くないわ！\n"
+        sleep 2
+        print "あなたが悪いのよ!\n"
+
       end
     end
   end
