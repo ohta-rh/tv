@@ -7,19 +7,19 @@ class Tv
 
     # 報道番組
     def news
-      print "ニュース番組だよ\n"
+      print "★★★ニュース番組だよ\n"
       new(:mc).onair
     end
 
     # バラエティ
     def variety
-      print "バラエティだよ！\n"
+      print "★★★バラエティだよ！\n"
       new(:mc, :sing, :acting, :conte).onair
     end
 
     # AV
     def av
-      print "R18\n"
+      print "★★★R18\n"
       new(:sex).onair
     end
   end
@@ -34,18 +34,12 @@ class Tv
       sleep 1
       talent.public_send behavior
     end
-
-    ensure_onair
   end
 
   private
 
   def talent
     @talent ||= Office.build_talent @behaviors
-  end
-
-  def ensure_onair
-    print "ご清聴ありがとうございました\n"
   end
 end
 
